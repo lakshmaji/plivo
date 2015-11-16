@@ -45,7 +45,7 @@ Then, add a Facade for more convenient usage. In `app/config/app.php` add the fo
 
 
 
-Sending a SMS Message
+>Sending a SMS Message
 
 ```php
 <?php
@@ -55,7 +55,7 @@ Use Plivo;
 Plivo::sendMessagePlivo($auth_id,$auth_token);
 ```
 
-miscellaneous
+>Miscellaneous
 
 ```php
 <?php
