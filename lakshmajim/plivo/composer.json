@@ -2,10 +2,11 @@
     "name": "lakshmajim/plivo",
     "description": "plivo for laravel",
     "license": "MIT",
+    "keywords": ["laravel"],
     "authors": [
         {
             "name": "lakshmaji",
-            "email": "lakshmajee88@gmail.com"
+            "email": ""
         }
     ],
     "minimum-stability": "stable",
@@ -17,4 +18,8 @@
                     "lakshmajim\\plivo\\": "src/"
         }
     }
+
+
+    
+
 }
