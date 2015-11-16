@@ -1,0 +1,20 @@
+{
+    "name": "lakshmajim/plivo",
+    "description": "plivo for laravel",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "lakshmaji",
+            "email": "lakshmajee88@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+
+    "autoload": {
+        "psr-4": {
+                    "App\\": "app/",
+                    "lakshmajim\\plivo\\": "src/"
+        }
+    }
+}
