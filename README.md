@@ -62,9 +62,9 @@ miscellaneous
 
   Use Plivo;
   //setting source mobile number
-  Plivo::setSourceMobile("918179278096");
+  Plivo::setSourceMobile("918888888888");
   //setting destination mobile number
-  Plivo::setDestinationMobile("919966567886");
+  Plivo::setDestinationMobile("919999999999");
   //setting text message
   Plivo::setMessagePlivo(" is!");
   //setting call back url
