@@ -92,7 +92,7 @@ class Controller extends BaseController
         $txt  = Plivo::setMessagePlivo("<YOUR TEXT MESSAGE>");
         $url  = Plivo::setCallBackUrl("<YOUR_RETURN_BACK_URL>");
         $smsObject=Plivo::sendMessagePlivo('<YOUR_AUTH_ID>','<YOUR_AUTH_TOKEN>');
-           echo "$smsObject";         //diaplay final message response
+        echo "$smsObject";         //diaplay final message response
     }
 }
 
