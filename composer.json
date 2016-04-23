@@ -9,7 +9,7 @@
             "email": ""
         }
     ],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "require": {},
 
     "autoload": {
@@ -18,8 +18,5 @@
                     "lakshmajim\\plivo\\": "src/"
         }
     }
-
-
-    
-
 }
+
