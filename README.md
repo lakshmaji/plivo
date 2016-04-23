@@ -102,4 +102,3 @@ class Controller extends BaseController
 >##LICENSE
 
 [MIT License (MIT)](https://opensource.org/licenses/MIT)
-![Image ofend of file](https://raw.githubusercontent.com/lakshmajim/images/master/end.gif)
