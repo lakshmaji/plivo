@@ -122,7 +122,7 @@ class Plivo {
         $sendsms=new \RestAPI($this->auth_id, $this->auth_token);
         $response = $sendsms->send_message($params);
 
-        if($sendsms->send_message($params))
+        if($response["status"] == 202)
         {
             return "Message sent successfully";
         }
