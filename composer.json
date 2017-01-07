@@ -1,22 +1,24 @@
 {
     "name": "lakshmajim/plivo",
-    "description": "plivo for laravel",
-    "license": "MIT",
-    "keywords": ["laravel"],
+    "description": "",
     "authors": [
         {
-            "name": "lakshmaji",
+            "name": "Ananth Mutyala",
             "email": ""
         }
     ],
-    "minimum-stability": "dev",
-    "require": {},
-
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "4.2.*",
+        "plivo/plivo-php": "^1.1"
+    },
     "autoload": {
-        "psr-4": {
-                    "App\\": "app/",
-                    "lakshmajim\\plivo\\": "src/"
+        "classmap": [
+            "src/migrations"
+        ],
+        "psr-0": {
+            "Lakshmajim\\Plivo\\": "src/"
         }
-    }
+    },
+    "minimum-stability": "stable"
 }
-
