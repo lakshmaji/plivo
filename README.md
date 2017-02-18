@@ -10,31 +10,26 @@
 ![Image of plivo dashboard](https://raw.githubusercontent.com/lakshmajim/images/master/plivo.png)
 
 
+>### Version
+
+1.1.0
+
+>### Compatibility
+
+**Laravel version**     | **Plivo version**
+-------- | ---
+5.4    | -
+5.2    | -
+5.1    | -
+5.0    | -
+4.2    | 1.1.0
+
 
 
 >##INSTALLATION
 
-Download package form  https://github.com/lakshmajim/plivo . 
-Place it in vendor directory of your project.
-edit composer.json file
-```bash
- "autoload": {
-        "classmap": [
-            "database"
-        ],
-        "psr-4": {
-            "App\\": "app/",
-            "lakshmajim\\plivo\\": "vendor/lakshmajim/plivo/src"   
-        }
-    },
-```
-
-Run this command from the Terminal:
-
-```bash
-    composer dumpautoload
-    composer update
-```
+ - This package is available on packagist , you can install this package issuing the following command from the terminal
+ 	``` composer require lakshmajim/plivo ```
 
 >##Laravel INTEGRATION
 
@@ -42,10 +37,11 @@ you need to add the service provider. Open `app/config/app.php`, and add a new i
 ```php
  lakshmajim\plivo\PlivoServiceProvider::class,
 ```
-Then, add a Facade for more convenient usage. In `app/config/app.php` add the following line to the `aliases` array:
-```php
-'Plivo'     => lakshmajim\plivo\Facade\Plivo::class,
-```
+
+We need to publish the configuration file
+ ``` php artisan config:publish --path="vendor/lakshmajim/plivo/src/config" lakshmajim/plivo  ```
+
+In the plivo.php configuration file we need to enter the Plivo API key and ID
 
 >##SENDING SMS
 
@@ -54,7 +50,52 @@ Then, add a Facade for more convenient usage. In `app/config/app.php` add the fo
 
 Use Plivo;
 
-Plivo::sendMessagePlivo($auth_id,$auth_token);
+$params = array(
+	'src' => '1111111111',
+	'dst' => '91999999999',
+	'text' => 'Hello world!'
+);
+
+Plivo::sendSMS($params);
+```
+>##Sent SMS history
+
+```php
+<?php
+
+Use Plivo;
+
+// Lists all messages history
+$list_all_messages = Plivo::allMessages();
+
+// Lists the filtered messages (pagination)
+$params = array(
+	'limit' => 2,
+	'offset' => 2,
+	'message_direction' => 'inbound',
+	'message_state' => 'delivered',
+);
+$list_some_messages = Plivo::allMessages($params);
+```
+
+>##Get Message data
+
+```php
+<?php
+
+Use Plivo;
+
+// Lists all messages history
+$list_all_messages = Plivo::allMessages();
+
+// Lists the filtered messages (pagination)
+$params = array(
+	'limit' => 2,
+	'offset' => 2,
+	'message_direction' => 'inbound',
+	'message_state' => 'delivered',
+);
+$list_some_messages = Plivo::allMessages($params);
 ```
 
 >##MISCELLANEOUS
@@ -63,14 +104,13 @@ Plivo::sendMessagePlivo($auth_id,$auth_token);
 <?php
 
   Use Plivo;
-  //setting source mobile number
-  Plivo::setSourceMobile("918888888888");
-  //setting destination mobile number
-  Plivo::setDestinationMobile("919999999999");
-  //setting text message
-  Plivo::setMessagePlivo(" is!");
-  //setting call back url
-  Plivo::setCallBackUrl("http://localhost/");```
+
+  $params = array(
+	  'country_iso' => 'IN'
+  );
+  
+  // List the pricing plans available in a country by using country ISO code
+  Plivo::pricing($params);
 ```
 
 
@@ -78,22 +118,26 @@ Plivo::sendMessagePlivo($auth_id,$auth_token);
 
 ```php
 
-<?php namespace App\Http\Controllers;
+<?php 
+// Define namespace
+namespace App\Http\Controllers;
 
+// Include required namespaces
 use Illuminate\Routing\Controller as BaseController;
 use Plivo;
 
 class Controller extends BaseController
 {
-       public function sendSMS()
+    public function sendSMS()
     {
-        $src  = Plivo::setSourceMobile("<SOURCE MOBILE NUMBER>");
-        $dest = Plivo::setDestinationMobile("<RECEIVERS MOBILE NUMBER>");
-        $txt  = Plivo::setMessagePlivo("<YOUR TEXT MESSAGE>");
-        $url  = Plivo::setCallBackUrl("<YOUR_RETURN_BACK_URL>");
-        $smsObject=Plivo::sendMessagePlivo('<YOUR_AUTH_ID>','<YOUR_AUTH_TOKEN>');
-        echo "$smsObject";         //diaplay final message response
-    }
+		$params = array(
+			'src' => '1111111111',
+			'dst' => '91999999999',
+			'text' => 'Hello world!'
+		);
+		
+		$response = Plivo::sendSMS($params);
+		
 }
 
 
@@ -101,4 +145,5 @@ class Controller extends BaseController
 
 >##LICENSE
 
-[MIT License (MIT)](https://opensource.org/licenses/MIT)
+[MIT](https://opensource.org/licenses/MIT)
+
