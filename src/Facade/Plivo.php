@@ -1,15 +1,17 @@
 <?php 
 
 namespace Lakshmajim\Plivo\Facade;
- 
+
+// Inlcude namespace 
 use Illuminate\Support\Facades\Facade;
  
 /**
  * Plivo - Facade to support integration with Laravel framework 
  *
- * @package  Plivo
- * @version  1.2.0
- * @author   lakshmaji 
+ * @author     lakshmaji 
+ * @package    Plivo
+ * @version    1.4.2
+ * @since      Class available since Release 1.0.0
  */ 
 class Plivo extends Facade {
  

@@ -1,6 +1,7 @@
-<?php 
+<?php
 
 // Define namespace
+
 namespace Lakshmajim\Plivo;
 
 // Include namespaces
@@ -16,8 +17,8 @@ use Illuminate\Support\ServiceProvider;
  * @version    1.2.0
  * @since      Class available since Release 1.2.0
  */
-class PlivoServiceProvider extends ServiceProvider {
-
+class PlivoServiceProvider extends ServiceProvider
+{
     /**
      * Bootstrap the application services.
      *
@@ -25,7 +26,9 @@ class PlivoServiceProvider extends ServiceProvider {
      */
     public function boot()
     {
-        //
+        $this->publishes([
+            __DIR__.'/config/plivo.php' => config_path('plivo.php'),
+        ]);
     }
 
     /**
@@ -34,7 +37,7 @@ class PlivoServiceProvider extends ServiceProvider {
      * @return  void
      * @author  lakshmaji 
      * @package Plivo
-     * @version 1.4.2
+     * @version 
      * @since   Method available since Release 1.2.0
      */
     public function register()
@@ -50,5 +53,3 @@ class PlivoServiceProvider extends ServiceProvider {
         }
     }
 }
-// end of class PlivoServiceProvider
-// end of file PlivoServiceProvider.php

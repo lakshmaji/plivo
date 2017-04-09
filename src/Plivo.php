@@ -1,7 +1,7 @@
-<?php 
+<?php
 
-// Define namespace
 namespace Lakshmajim\Plivo;
+
 
 // Include namespace
 use Config;
@@ -12,7 +12,7 @@ use Plivo\PlivoError;
 
 /**
  * Plivo - A package integrating Plivo SMS 
- * with Laravel 4 framework applications
+ * with Laravel 5.* framework applications
  *
  * @author     lakshmaji 
  * @package    Plivo
@@ -22,18 +22,18 @@ use Plivo\PlivoError;
 class Plivo {
 	
 
-     	/**
-     	 * Plivo class constructor class for
-     	 * Initializing objects
-     	 * 
-     	 * @access     public
-     	 * @param      int    $auth_id
-     	 * @param      int    $auth_token
-     	 * @return     
-     	 * @version    1.2.0
-     	 * @author     lakshmajim 
-     	 * @since      Method available since Release 1.2.0
-     	 */
+ 	/**
+ 	 * Plivo class constructor class for
+ 	 * Initializing objects
+ 	 * 
+ 	 * @access     public
+ 	 * @param      int    $auth_id
+ 	 * @param      int    $auth_token
+ 	 * @return     
+ 	 * @version    1.2.0
+ 	 * @author     lakshmajim 
+ 	 * @since      Method available since Release 1.2.0
+ 	 */
 	public function __construct()
 	{
 		$this->auth_id    = Config::get('plivo::plivo.PLIVO_AUTH_ID');
@@ -63,19 +63,19 @@ class Plivo {
 
 
 	/**
-     	 * Send sms to specified number using plivo
-     	 * cloud API
-     	 *  
-     	 * @access     public
-     	 * @param      array  $params
-     	 * @param      int    $src
-     	 * @param      int    $dst
-     	 * @param      string $text
-     	 * @return     array  $response
-     	 * @version    1.2.0
-     	 * @author     lakshmajim 
-     	 * @since      Method available since Release 1.2.0
-     	 */
+ 	 * Send sms to specified number using plivo
+ 	 * cloud API
+ 	 *  
+ 	 * @access     public
+ 	 * @param      array  $params
+ 	 * @param      int    $src
+ 	 * @param      int    $dst
+ 	 * @param      string $text
+ 	 * @return     array  $response
+ 	 * @version    1.2.0
+ 	 * @author     lakshmajim 
+ 	 * @since      Method available since Release 1.2.0
+ 	 */
 	public function sendSMS($params)
 	{
 		try {
@@ -91,15 +91,15 @@ class Plivo {
 
 
 	/**
-     	 * Get the message details by UUID
-     	 * 
-     	 * @access     public
-     	 * @param      string $muuid
-     	 * @return     array  $response
-     	 * @version    1.2.0
-     	 * @author     lakshmajim 
-     	 * @since      Method available since Release 1.2.0
-     	 */
+ 	 * Get the message details by UUID
+ 	 * 
+ 	 * @access     public
+ 	 * @param      string $muuid
+ 	 * @return     array  $response
+ 	 * @version    1.2.0
+ 	 * @author     lakshmajim 
+ 	 * @since      Method available since Release 1.2.0
+ 	 */
 	public function getDetailByMUUID($muuid)
 	{
 		return $this->auth()->get_message($muuid);
@@ -109,22 +109,22 @@ class Plivo {
 
 
 	/**
-     	 * Get all messages 
-     	 *
-     	 * Has the feature to filter results based on
-     	 * the given criteria
-     	 * 
-     	 * @access     public
-     	 * @param      array  $params
-     	 * @param      int    $limit
-     	 * @param      int    $offset
-     	 * @param      string $message_direction
-     	 * @param      string $message_state
-     	 * @return     array  $response
-     	 * @version    1.2.0
-     	 * @author     lakshmajim 
-     	 * @since      Method available since Release 1.2.0
-     	 */
+ 	 * Get all messages 
+ 	 *
+ 	 * Has the feature to filter results based on
+ 	 * the given criteria
+ 	 * 
+ 	 * @access     public
+ 	 * @param      array  $params
+ 	 * @param      int    $limit
+ 	 * @param      int    $offset
+ 	 * @param      string $message_direction
+ 	 * @param      string $message_state
+ 	 * @return     array  $response
+ 	 * @version    1.2.0
+ 	 * @author     lakshmajim 
+ 	 * @since      Method available since Release 1.2.0
+ 	 */
 	public function allMessages($params = [])
 	{
 		return $this->auth()->get_messages($params);
@@ -134,15 +134,15 @@ class Plivo {
 
 
 	/**
-     	 * Get account details
-     	 * 
-     	 * @access     public
-     	 * @param      
-     	 * @return     array  $response
-     	 * @version    1.2.0
-     	 * @author     lakshmajim 
-     	 * @since      Method available since Release 1.2.0
-     	*/
+ 	 * Get account details
+ 	 * 
+ 	 * @access     public
+ 	 * @param      
+ 	 * @return     array  $response
+ 	 * @version    1.2.0
+ 	 * @author     lakshmajim 
+ 	 * @since      Method available since Release 1.2.0
+   	 */
 	public function accountDetails()
 	{
 		return $this->auth()->get_account();
@@ -152,16 +152,16 @@ class Plivo {
 
 
 	/**
-     	 * Get levy range
-     	 * 
-     	 * @access     public
-     	 * @param      array  $params
-     	 * @param      string $country_iso
-     	 * @return     array  $response
-     	 * @version    1.2.0
-     	 * @author     lakshmajim 
-     	 * @since      Method available since Release 1.2.0
-     	 */
+ 	 * Get levy range
+ 	 * 
+ 	 * @access     public
+ 	 * @param      array  $params
+ 	 * @param      string $country_iso
+ 	 * @return     array  $response
+ 	 * @version    1.2.0
+ 	 * @author     lakshmajim 
+ 	 * @since      Method available since Release 1.2.0
+ 	 */
 	public function pricing($params)
 	{
 		return $this->auth()->pricing($params);		
@@ -171,15 +171,15 @@ class Plivo {
 
 
 	/**
-     	 * List available applications
-     	 * 
-     	 * @access     public
-     	 * @param      
-     	 * @return     array  $response
-     	 * @version    1.2.0
-     	 * @author     lakshmajim 
-      	 * @since      Method available since Release 1.2.0
-     	 */
+ 	 * List available applications
+ 	 * 
+ 	 * @access     public
+ 	 * @param      
+ 	 * @return     array  $response
+ 	 * @version    1.2.0
+ 	 * @author     lakshmajim 
+  	 * @since      Method available since Release 1.2.0
+ 	 */
 	public function listApplications()
 	{
 		return $this->auth()->get_applications();		
@@ -193,5 +193,3 @@ class Plivo {
 
 
 }
-// end of class Plivo
-// end of file Plivo.php
