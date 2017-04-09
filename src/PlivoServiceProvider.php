@@ -40,8 +40,8 @@ class PlivoServiceProvider extends ServiceProvider {
     public function register()
     {
         if (method_exists(\Illuminate\Foundation\Application::class, 'singleton')) {
-            $this->app->singleton('thumbnail', function($app) {
-                return new Thumbnail;
+            $this->app->singleton('plivo', function($app) {
+                return new Plivo;
             });
         } else {
             $this->app['plivo'] = $this->app->share(function($app) {
