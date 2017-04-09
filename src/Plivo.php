@@ -16,8 +16,8 @@ use Plivo\PlivoError;
  *
  * @author     lakshmaji 
  * @package    Plivo
- * @version    1.0.0
- * @since      Class available since Release 1.0.0
+ * @version    1.2.0
+ * @since      Class available since Release 1.2.0
  */
 class Plivo {
 	
@@ -30,9 +30,9 @@ class Plivo {
      	 * @param      int    $auth_id
      	 * @param      int    $auth_token
      	 * @return     
-     	 * @version    1.0.0
+     	 * @version    1.2.0
      	 * @author     lakshmajim 
-     	 * @since      Method available since Release 1.0.0
+     	 * @since      Method available since Release 1.2.0
      	 */
 	public function __construct()
 	{
@@ -50,9 +50,9 @@ class Plivo {
 	 * @param      string  $auth_id
 	 * @param      string  $auth_token
 	 * @return     
-	 * @version    1.0.0
+	 * @version    1.2.0
 	 * @author     lakshmajim 
-	 * @since      Method available since Release 1.0.0
+	 * @since      Method available since Release 1.2.0
 	 */
 	protected function auth()
 	{
@@ -72,9 +72,9 @@ class Plivo {
      	 * @param      int    $dst
      	 * @param      string $text
      	 * @return     array  $response
-     	 * @version    1.0.0
+     	 * @version    1.2.0
      	 * @author     lakshmajim 
-     	 * @since      Method available since Release 1.0.0
+     	 * @since      Method available since Release 1.2.0
      	 */
 	public function sendSMS($params)
 	{
@@ -96,9 +96,9 @@ class Plivo {
      	 * @access     public
      	 * @param      string $muuid
      	 * @return     array  $response
-     	 * @version    1.0.0
+     	 * @version    1.2.0
      	 * @author     lakshmajim 
-     	 * @since      Method available since Release 1.0.0
+     	 * @since      Method available since Release 1.2.0
      	 */
 	public function getDetailByMUUID($muuid)
 	{
@@ -121,9 +121,9 @@ class Plivo {
      	 * @param      string $message_direction
      	 * @param      string $message_state
      	 * @return     array  $response
-     	 * @version    1.0.0
+     	 * @version    1.2.0
      	 * @author     lakshmajim 
-     	 * @since      Method available since Release 1.0.0
+     	 * @since      Method available since Release 1.2.0
      	 */
 	public function allMessages($params = [])
 	{
@@ -139,9 +139,9 @@ class Plivo {
      	 * @access     public
      	 * @param      
      	 * @return     array  $response
-     	 * @version    1.0.0
+     	 * @version    1.2.0
      	 * @author     lakshmajim 
-     	 * @since      Method available since Release 1.0.0
+     	 * @since      Method available since Release 1.2.0
      	*/
 	public function accountDetails()
 	{
@@ -158,9 +158,9 @@ class Plivo {
      	 * @param      array  $params
      	 * @param      string $country_iso
      	 * @return     array  $response
-     	 * @version    1.0.0
+     	 * @version    1.2.0
      	 * @author     lakshmajim 
-     	 * @since      Method available since Release 1.0.0
+     	 * @since      Method available since Release 1.2.0
      	 */
 	public function pricing($params)
 	{
@@ -176,9 +176,9 @@ class Plivo {
      	 * @access     public
      	 * @param      
      	 * @return     array  $response
-     	 * @version    1.0.0
+     	 * @version    1.2.0
      	 * @author     lakshmajim 
-      	 * @since      Method available since Release 1.0.0
+      	 * @since      Method available since Release 1.2.0
      	 */
 	public function listApplications()
 	{
