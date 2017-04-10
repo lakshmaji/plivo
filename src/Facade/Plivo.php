@@ -1,5 +1,6 @@
 <?php 
 
+// Define namespace
 namespace Lakshmajim\Plivo\Facade;
 
 // Inlcude namespace 
@@ -10,8 +11,8 @@ use Illuminate\Support\Facades\Facade;
  *
  * @author     lakshmaji 
  * @package    Plivo
- * @version    1.4.2
- * @since      Class available since Release 1.0.0
+ * @version    1.2.4
+ * @since      Class available since Release 1.1.0
  */ 
 class Plivo extends Facade {
  

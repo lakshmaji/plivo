@@ -4,12 +4,15 @@
     "require": {
         "plivo/plivo-php": "^1.1"
     },
-    "description": "",
+    "description": "Send SMS using Plivo Cloud API",
     "authors": [
         {
             "name": "Ananth Mutyala",
             "email": ""
         }
+    ],
+    "keywords" :[
+        "Laravel", "Plivo", "PHP", "SMS", "API"
     ],
     "autoload": {
         "psr-4": {

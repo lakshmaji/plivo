@@ -12,36 +12,45 @@
 
 >### Version
 
-1.1.0
+1.2.4
 
 >### Compatibility
 
 **Laravel version**     | **Plivo version**
 -------- | ---
-5.4    | -
-5.2    | -
-5.1    | -
-5.0    | -
+5.4    | 1.2.4
+5.2    | 1.2.4
+5.1    | 1.2.4
+5.0    | 1.2.4
 4.2    | 1.1.0
 
 
-
 >##INSTALLATION
+To install this package you will need:
+ - Laravel 4 or 5 (see compatibility table)
+ - PHP 
 
- - This package is available on packagist , you can install this package issuing the following command from the terminal
+Install via composer ( you can install this package issuing the following command from the terminal )
  	``` composer require lakshmajim/plivo ```
 
 >##Laravel INTEGRATION
 
-you need to add the service provider. Open `app/config/app.php`, and add a new item to the providers array.
+Once this has finished, you will need to add the service provider to the **providers** array in your app.php config as follows:
 ```php
- lakshmajim\plivo\PlivoServiceProvider::class,
+ Lakshmajim\Plivo\PlivoServiceProvider::class,
 ```
+Next, also in the app.php config file, under the **aliases** array, you are required to add the *Plivo* facade.
+```php
+'Plivo' => Lakshmajim\Plivo\Facade\Plivo::class,
+```
+Finally, you will want to publish the config using the following command:
+ ``` php artisan vendor:publish  ```
 
-We need to publish the configuration file
- ``` php artisan config:publish --path="vendor/lakshmajim/plivo/src/config" lakshmajim/plivo  ```
 
 In the plivo.php configuration file we need to enter the Plivo API key and ID
+
+> **Don't forget to set a auth id and auth secret keys in the config file!**, you can get them at Plivo dashboard.
+
 
 >##SENDING SMS
 
@@ -147,3 +156,5 @@ class Controller extends BaseController
 
 [MIT](https://opensource.org/licenses/MIT)
 
+>##Todo
+ - Need to add voice support
