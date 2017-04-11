@@ -1,5 +1,6 @@
 # Laravel - plivo
-[docs on web](http://lakshmajim.github.io/plivo/)
+~~[docs on web](http://lakshmajim.github.io/plivo/)~~
+
 >## WHAT IT IS?
 
 - This package is used to send sms to any mobile number.
