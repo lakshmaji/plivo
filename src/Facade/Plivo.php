@@ -1,7 +1,7 @@
 <?php 
 
 // Define namespace
-namespace Lakshmajim\Plivo\Facade;
+namespace Lakshmaji\Plivo\Facade;
 
 // Inlcude namespace 
 use Illuminate\Support\Facades\Facade;

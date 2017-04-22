@@ -1,5 +1,5 @@
 {
-    "name": "lakshmajim/plivo",
+    "name": "lakshmaji/plivo",
     "license": "MIT",
     "require": {
         "plivo/plivo-php": "^1.1"
@@ -16,7 +16,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Lakshmajim\\Plivo\\": "src/"
+            "Lakshmaji\\Plivo\\": "src/"
         }
 	},
     "minimum-stability": "dev"

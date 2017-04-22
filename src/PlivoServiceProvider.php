@@ -1,7 +1,7 @@
 <?php
 
 // Define namespace
-namespace Lakshmajim\Plivo;
+namespace Lakshmaji\Plivo;
 
 // Include namespaces
 use Illuminate\Support\ServiceProvider;
