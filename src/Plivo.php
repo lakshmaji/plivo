@@ -5,7 +5,9 @@ namespace Lakshmaji\Plivo;
 
 // Include required namespaces
 use Config;
+use Event;
 use Exception;
+use Lakshmaji\Plivo\Events\LogBeforeSend;
 use Plivo\RestAPI;
 use Plivo\PlivoError;
 
@@ -78,6 +80,7 @@ class Plivo {
  	 */
 	public function sendSMS($params)
 	{
+        Event::fire(new LogBeforeSend($params));
 		try {
 			return $this->auth()->send_message($params);
 		} catch(PlivoError $pe) {
