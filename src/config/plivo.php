@@ -2,13 +2,13 @@
 
 /*
 |--------------------------------------------------------------------------
-| File which returns array of constants containing the plivo SMS GateWay 
-| integration credentials. 
+| File which returns array of constants containing the plivo SMS GateWay
+| integration credentials.
 |--------------------------------------------------------------------------
 |
 */
 
-return array(
+return [
 
     /*
     |--------------------------------------------------------------------------
@@ -19,7 +19,7 @@ return array(
     |
     */
 
-	'PLIVO_AUTH_ID' => '<YOUR_Plivo_API_KEY>',
+    'PLIVO_AUTH_ID' => '<YOUR_Plivo_API_KEY>',
 
     /*
     |--------------------------------------------------------------------------
@@ -30,9 +30,8 @@ return array(
     |
     */
 
-	'PLIVO_AUTH_TOKEN' => '<YOUR_Plivo_API_toKeN>',
+    'PLIVO_AUTH_TOKEN' => '<YOUR_Plivo_API_toKeN>',
 
-
-);
+];
 
 // end of file plivo.php

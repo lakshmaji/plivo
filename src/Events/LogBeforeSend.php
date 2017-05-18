@@ -1,23 +1,24 @@
-<?php 
+<?php
+
 
 // Define namespace
-namespace Lakshmaji\Plivo\Events;
- 
-class LogBeforeSend{
 
+namespace Lakshmaji\Plivo\Events;
+
+class LogBeforeSend
+{
     /**
      * @var array
      */
     public $params;
- 
-     /**
+
+    /**
      * Constructor.
      *
-     * @param array     $params
+     * @param array $params
      */
     public function __construct($params)
     {
         $this->params = $params;
     }
-
 }
