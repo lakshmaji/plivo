@@ -32,7 +32,8 @@ To install this package you will need:
  - PHP 
 
 Install via composer ( you can install this package issuing the following command from the terminal )
- 	``` composer require lakshmaji/plivo ```
+
+``` composer require lakshmaji/plivo ```
 
 >## Laravel INTEGRATION
 
